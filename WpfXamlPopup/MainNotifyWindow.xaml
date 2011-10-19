@@ -1,0 +1,68 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WpfXamlPopup"
+    x:Class="Pivodeck.UI.MainNotifyWindow" x:Name="uiMainNotifyWindow"
+    Title="" Height="310" Width="550"
+    ShowInTaskbar="False"
+    WindowStyle="None" 
+    AllowsTransparency="True" 
+    ResizeMode="NoResize"
+    Background="Transparent"
+    MouseEnter="uiWindowMainNotification_MouseEnter"
+    MouseLeave="uiWindowMainNotification_MouseLeave" 
+    Visibility="Visible" 
+    Topmost="True" 
+    BorderThickness="1" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Pivodeck.UI" mc:Ignorable="d">
+    <Window.Resources>       
+        <Storyboard x:Key="gridFadeInStoryBoard">
+            <DoubleAnimation Storyboard.TargetName="uiGridMain" BeginTime="0:0:0.1"
+                Storyboard.TargetProperty="Opacity" From="0.00" To="1.00" AutoReverse="False" Duration="0:0:0.3" />
+        </Storyboard>
+        <Storyboard x:Key="gridFadeOutStoryBoard">
+            <DoubleAnimation Storyboard.TargetName="uiGridMain" BeginTime="0:0:0.5"
+                Storyboard.TargetProperty="Opacity" From="1.00" To="0.00" AutoReverse="False" Duration="0:0:0.3" />
+        </Storyboard>      
+    </Window.Resources>
+    <Border CornerRadius="5">
+        <Grid x:Name="uiGridMain" Margin="10">   
+            <Border Width="Auto" Height="Auto" Style="{StaticResource MainGridBorder}">            
+            </Border>
+            <Grid Margin="5,0,12,0">
+             	<Grid.RowDefinitions>
+            		<RowDefinition Height="0"/>
+            		<RowDefinition Height="18" />
+                </Grid.RowDefinitions>
+            	<Grid.ColumnDefinitions>
+            		<ColumnDefinition Width="*"/>
+            		<ColumnDefinition Width="36" />
+                    <ColumnDefinition Width="42" />
+                </Grid.ColumnDefinitions>
+                <!--<local:SlickToggleButton CornerRadius="0,0,0,4" x:Name="PinButton" Style="{StaticResource SlickButton}" HighlightBackground="Blue" PressedBackground="DarkBlue" Grid.Column="1" Grid.Row="1" FontWeight="Bold" Click="PinButton_Click">
+                        <Image x:Name="PinImage" Source="pack://application:,,/Images/Un-Pinned.png" Stretch="None"/>
+                </local:SlickToggleButton>-->
+                <UI:SlickToggleButton CornerRadius="0,0,4,0" x:Name="CloseButton" Style="{StaticResource SlickButton}" HighlightBackground="Red" Content="X" Click="CloseButton_Click" Grid.Row="1" FontWeight="Bold" Foreground="#FFFFFFFF" Grid.Column="2" />
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="44"/>
+                </Grid.RowDefinitions>
+            	<local:HorizontalSeparator d:LayoutOverrides="HorizontalAlignment" Grid.Row="1"/>
+                <local:HorizontalSeparator d:LayoutOverrides="HorizontalAlignment" Grid.Row="5"/>
+                <Label Margin="5,3.395,79,15" x:Name="TitleLabel" Foreground="White" Opacity="0.9" Content="Pivodeck"/>
+                <StackPanel Grid.Row="1" Margin="10,10,10,10">
+                    <Label FontWeight="Bold">Content here</Label>
+                </StackPanel>
+                <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" Margin="5,5,5,5" Grid.Row="2">
+                    <Button HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto">Abrir Projeto</Button>
+                    <Button Name="btnCreateTask" HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto" Click="btnCreateTask_Click">Criar Task </Button>
+                    <Button HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto" Click="Button_Click">Configuração</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,44 @@
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\bin\Debug\WpfXamlPopup.exe
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\bin\Debug\WpfXamlPopup.pdb
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\bin\Debug\ExtendedWindowsControls.dll
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\bin\Debug\ExtendedWindowsControls.pdb
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\HorizontalSeparatorRD.baml
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\StealthButtonRD.baml
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\MainGridStyleRD.baml
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\App.baml
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\HorizontalSeparatorRD.g.cs
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\MainNotifyWindow.g.cs
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\App.g.cs
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\WpfXamlPopup_MarkupCompile.cache
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\WpfXamlPopup_MarkupCompile.lref
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\MainNotifyWindow.baml
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\SlickButtonRD.baml
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\WpfXamlPopup.g.resources
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\WpfXamlPopup.exe
+C:\Users\nielsenteixeira\Desktop\WPF XAML Notify Icon and Popup Code\WpfXamlPopup\obj\Debug\WpfXamlPopup.pdb
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\bin\Debug\WpfXamlPopup.exe
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\bin\Debug\WpfXamlPopup.pdb
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\bin\Debug\ExtendedWindowsControls.dll
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\bin\Debug\ExtendedWindowsControls.pdb
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\Config.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\HorizontalSeparatorRD.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\StealthButtonRD.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\MainGridStyleRD.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\App.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\Config.g.cs
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\HorizontalSeparatorRD.g.cs
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\MainNotifyWindow.g.cs
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\App.g.cs
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\WpfXamlPopup_MarkupCompile.cache
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\WpfXamlPopup_MarkupCompile.lref
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\MainNotifyWindow.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\SlickButtonRD.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\WpfXamlPopup.g.resources
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\WpfXamlPopup.exe
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\WpfXamlPopup.pdb
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\CreateTask.baml
+C:\Users\nielsenteixeira\Documents\Visual Studio 2010\Projects\Pivodeck\WpfXamlPopup\obj\Debug\CreateTask.g.cs
