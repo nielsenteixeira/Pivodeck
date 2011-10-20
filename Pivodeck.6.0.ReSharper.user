@@ -2,52 +2,53 @@
   <RecentFiles>
     <RecentFiles>
       <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:CreateTask.xaml.cs" caret="495" fromTop="0" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="890" fromTop="18" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="5756" fromTop="10" />
       <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:CreateTask.xaml" caret="3111" fromTop="9" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="1" fromTop="0" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="2941" fromTop="12" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="533" fromTop="0" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="5756" fromTop="10" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="1482" fromTop="26" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:app.config" caret="0" fromTop="0" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="990" fromTop="23" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="6304" fromTop="11" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5777" fromTop="38" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:CreateTask.xaml.cs" caret="815" fromTop="22" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="201" fromTop="3" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="1820" fromTop="7" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="3046" fromTop="8" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="2379" fromTop="8" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="3567" fromTop="6" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1850" fromTop="17" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1495" fromTop="6" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="633" fromTop="16" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="520" fromTop="12" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="211" fromTop="6" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="392" fromTop="12" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="832" fromTop="18" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1643" fromTop="13" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4351" fromTop="37" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4323" fromTop="36" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1778" fromTop="31" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4323" fromTop="21" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="1137" fromTop="23" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4031" fromTop="25" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4031" fromTop="23" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4129" fromTop="35" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="5077" fromTop="23" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="5186" fromTop="13" />
-      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="5339" fromTop="16" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="252" fromTop="9" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="1417" fromTop="6" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4485" fromTop="36" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="2685" fromTop="11" />
-      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="752" fromTop="20" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="895" fromTop="20" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="990" fromTop="23" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2529" fromTop="15" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2529" fromTop="15" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2529" fromTop="15" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2529" fromTop="15" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2529" fromTop="15" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2127" fromTop="15" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2531" fromTop="21" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="515" fromTop="9" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1857" fromTop="13" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="7359" fromTop="27" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="7076" fromTop="23" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="6698" fromTop="31" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="6566" fromTop="32" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="6432" fromTop="33" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="6140" fromTop="26" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="5896" fromTop="21" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="2954" fromTop="34" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5836" fromTop="8" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5836" fromTop="37" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="4139" fromTop="5" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5859" fromTop="37" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="4261" fromTop="14" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="4510" fromTop="18" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="4759" fromTop="22" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5013" fromTop="26" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5266" fromTop="30" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5521" fromTop="34" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="5777" fromTop="38" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="cbCriada" priority="31" />
-      <Item value="if" priority="191" />
+      <Item value="if" priority="223" />
       <Item value="cbDeletada" priority="30" />
-      <Item value="_pivotalNotifier" priority="95" />
+      <Item value="_pivotalNotifier" priority="255" />
       <Item value="cbEntregue" priority="31" />
       <Item value="cbFinalizada" priority="31" />
       <Item value="cbIniciada" priority="26" />
@@ -73,7 +74,7 @@
       <Item value="int" priority="127" />
       <Item value="txtProjeto" priority="95" />
       <Item value="DynamicResourceExtension`0" priority="31" />
-      <Item value="new" priority="159" />
+      <Item value="new" priority="191" />
       <Item value="d" priority="31" />
       <Item value="Thread" priority="28" />
       <Item value="public" priority="95" />
@@ -91,10 +92,10 @@
       <Item value="event" priority="31" />
       <Item value="CreatedTask`0" priority="32" />
       <Item value="OnCreatedTask" priority="31" />
-      <Item value="PivotalNotifier" priority="28" />
+      <Item value="PivotalNotifier" priority="57" />
       <Item value="null" priority="95" />
       <Item value="Action`0" priority="31" />
-      <Item value="this" priority="31" />
+      <Item value="this" priority="63" />
       <Item value="MouseDownEvent" priority="31" />
       <Item value="continue" priority="31" />
       <Item value="finally" priority="31" />
@@ -109,6 +110,7 @@
       <Item value="OnDeletedTask" priority="32" />
       <Item value="IDictionary" priority="31" />
       <Item value="List&lt;Story&gt;" priority="28" />
+      <Item value="MessageBox`0" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.CheckBox">
       <Item value="IsChecked" priority="81" />
@@ -131,6 +133,14 @@
       <Item value="CreateTask`0" priority="26" />
       <Item value="OnCreatedTask" priority="26" />
       <Item value="OnStartedTask" priority="26" />
+      <Item value="NewTask" priority="26" />
+      <Item value="DeletedTask" priority="26" />
+      <Item value="DeliveredTask" priority="26" />
+      <Item value="FinishedTask" priority="26" />
+      <Item value="StartedTask" priority="26" />
+      <Item value="OnDeletedTask" priority="26" />
+      <Item value="OnDeliveredTask" priority="26" />
+      <Item value="OnFinishedTask" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.Slider">
       <Item value="Value" priority="26" />
@@ -201,6 +211,23 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Pivodeck.Core.PivotalNotifier+TaskStatusChanged">
       <Item value="Invoke`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Pivodeck.Properties.Settings">
+      <Item value="Configurado" priority="26" />
+      <Item value="Token" priority="49" />
+      <Item value="ProjectId" priority="53" />
+      <Item value="TaskCriada" priority="54" />
+      <Item value="TaskDeletada" priority="54" />
+      <Item value="TaskEntregue" priority="54" />
+      <Item value="TaskFinalizada" priority="54" />
+      <Item value="TaskIniciada" priority="54" />
+      <Item value="Save`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="XamlCodeCompletionContext">
+      <Item value="Horizontal" priority="5" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>
