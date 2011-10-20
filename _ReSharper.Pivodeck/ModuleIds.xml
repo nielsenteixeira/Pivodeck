@@ -1,5 +1,4 @@
 <Modules>
   <Module PersistentId="8B8998DC-931A-453D-8467-9BA5FF5487AB" ModuleId="Pivodeck.Core" />
-  <Module PersistentId="EF9D9A9B-C739-4606-B1EF-4F662DCF5EF9" ModuleId="ExtendedWindowsControls" />
-  <Module PersistentId="9CD11B90-9CBA-4435-B51C-BAEAE1E7FAD9" ModuleId="WpfXamlPopup" />
+  <Module PersistentId="E78881F6-3E47-4BBD-A6F8-DC51C0C24936" ModuleId="Pivodeck" />
 </Modules>

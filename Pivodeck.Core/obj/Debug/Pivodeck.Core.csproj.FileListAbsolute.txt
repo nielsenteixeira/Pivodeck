@@ -4,3 +4,9 @@ c:\users\nielsenteixeira\documents\visual studio 2010\Projects\Pivodeck\Pivodeck
 c:\users\nielsenteixeira\documents\visual studio 2010\Projects\Pivodeck\Pivodeck.Core\obj\Debug\ResolveAssemblyReference.cache
 c:\users\nielsenteixeira\documents\visual studio 2010\Projects\Pivodeck\Pivodeck.Core\obj\Debug\Pivodeck.Core.dll
 c:\users\nielsenteixeira\documents\visual studio 2010\Projects\Pivodeck\Pivodeck.Core\obj\Debug\Pivodeck.Core.pdb
+C:\Projetos\Pivodeck\Pivodeck.Core\bin\Debug\Pivodeck.Core.dll
+C:\Projetos\Pivodeck\Pivodeck.Core\bin\Debug\Pivodeck.Core.pdb
+C:\Projetos\Pivodeck\Pivodeck.Core\bin\Debug\PivotalTracker.FluentAPI.dll
+C:\Projetos\Pivodeck\Pivodeck.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\Pivodeck\Pivodeck.Core\obj\Debug\Pivodeck.Core.dll
+C:\Projetos\Pivodeck\Pivodeck.Core\obj\Debug\Pivodeck.Core.pdb

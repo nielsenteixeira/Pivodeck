@@ -1,0 +1,73 @@
+﻿<Window x:Class="Pivodeck.CreateTask"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="400" Width="350" WindowStartupLocation="CenterScreen"
+    ShowInTaskbar="False"
+    WindowStyle="None" 
+    AllowsTransparency="True" 
+    ResizeMode="NoResize"
+    Background="Transparent"
+    Visibility="Visible" 
+    Topmost="True" 
+    BorderThickness="1" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Pivodeck" xmlns:UI="clr-namespace:Pivodeck" mc:Ignorable="d" Loaded="Window_Loaded">
+    <Border CornerRadius="5">
+        <Grid x:Name="uiGridMain" Margin="10">
+            <Border Width="Auto" Height="Auto" Style="{StaticResource MainGridBorder}">
+            </Border>        
+            <Grid Margin="5,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="18" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="36" />
+                    <ColumnDefinition Width="42" />
+                </Grid.ColumnDefinitions>
+                <!--<local:SlickToggleButton CornerRadius="0,0,0,4" x:Name="PinButton" Style="{StaticResource SlickButton}" HighlightBackground="Blue" PressedBackground="DarkBlue" Grid.Column="1" Grid.Row="1" FontWeight="Bold" Click="PinButton_Click">
+                        <Image x:Name="PinImage" Source="pack://application:,,/Images/Un-Pinned.png" Stretch="None"/>
+                </local:SlickToggleButton>-->
+                <UI:SlickToggleButton CornerRadius="0,0,4,0" x:Name="CloseButton" Style="{StaticResource SlickButton}" HighlightBackground="Red" Content="X" Click="CloseButton_Click" Grid.Row="1" FontWeight="Bold" Foreground="#FFFFFFFF" Grid.Column="2" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="76*" />
+                    <ColumnDefinition Width="214*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44" />
+                    <RowDefinition Height="33" />
+                    <RowDefinition Height="33" />
+                    <RowDefinition Height="33" />
+                    <RowDefinition Height="33" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="44" />
+                </Grid.RowDefinitions>
+                <Label x:Name="TitleLabel" Foreground="White" Opacity="0.9" Content="Criar Task" Width="120" Margin="5" />
+                <Label Content="Nome:" Name="label1" VerticalAlignment="Top" Margin="5" Padding="2" FontStyle="Normal" FontWeight="Bold" Grid.Row="1" />
+                <TextBox Name="txtNome" Grid.Column="1" Margin="5" Grid.Row="1" />
+                <Label Content="Tipo:" Name="label2" VerticalAlignment="Top" Grid.Row="2" Margin="5" Padding="2" FontStyle="Normal" FontWeight="Bold" />
+                <ComboBox Name="cmbTipo" Grid.Row="2" Grid.Column="1" Margin="5" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding Path=ImageValue}" Width="16" Height="16" Margin="5,0"></Image>
+                                <TextBlock Text="{Binding Key}"></TextBlock>                                
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Label Content="Labels:" Name="label3" VerticalAlignment="Top" Grid.Row="3" Margin="5" Padding="2" FontStyle="Normal" FontWeight="Bold" />
+                <TextBox Name="txtLabels" Grid.Row="3" Grid.Column="1" Margin="5" />
+                <Label Content="Pontos:" Name="label4" VerticalAlignment="Top" Grid.Row="4" Margin="5" Padding="2" FontStyle="Normal" FontWeight="Bold" />
+                <Slider Name="sldPontos" Maximum="8" IsSnapToTickEnabled="True" Grid.Row="4" Grid.Column="1" Margin="5" SmallChange="1" SnapsToDevicePixels="True" Ticks="0,1,2,3,5,8" TickPlacement="BottomRight" Delay="200" AutoToolTipPlacement="BottomRight" />
+                <Label Content="Descrição:" Name="label5" VerticalAlignment="Top" Grid.Row="5" Margin="5" Padding="2" FontStyle="Normal" FontWeight="Bold" />
+                <TextBox Name="txtDescricao" Grid.Row="5" Grid.Column="1" Margin="5" />
+                <local:HorizontalSeparator d:LayoutOverrides="HorizontalAlignment" Grid.Row="6" Grid.ColumnSpan="2"/>
+                <Button Margin="5" Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource StealthButton}" Width="100" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Name="btnOk" Click="btnOk_Click">Ok</Button>
+            </Grid>
+        </Grid>        
+    </Border>
+</Window>

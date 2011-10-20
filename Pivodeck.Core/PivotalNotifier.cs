@@ -11,9 +11,17 @@ namespace Pivodeck.Core
     {
         private PivotalTrackerFacade Pivotal;
 
+        public PivotalNotifier() { }
+
         public PivotalNotifier(string tokenValue)
         {
             var token = new Token(tokenValue); 
+            Pivotal = new PivotalTrackerFacade(token);
+        }
+
+        public void SetToken(string tokenValue)
+        {
+            var token = new Token(tokenValue);
             Pivotal = new PivotalTrackerFacade(token);
         }
 
