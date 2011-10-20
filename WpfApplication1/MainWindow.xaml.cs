@@ -16,7 +16,7 @@ namespace Pivodeck
 
         private readonly Storyboard _gridFadeInStoryBoard;
         private readonly Storyboard _gridFadeOutStoryBoard;
-        public static PivotalNotifier _pivotalNotifier;
+        private PivotalNotifier _pivotalNotifier;
 
         public MainWindow()
         {
@@ -39,18 +39,32 @@ namespace Pivodeck
             _gridFadeInStoryBoard.Completed += GridFadeInStoryBoardCompleted;
         }
 
-        void _pivotalNotifier_OnCreatedTask(Story story)
-        {
-            Action acao = () =>
-                              {
-                                  extendedNotifyIcon_OnShowWindow();
-                                  lblContent.Text = story.Name;
-                              };
-            Dispatcher.Invoke(acao);
-        }
-
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
+            if (Properties.Settings.Default.Configurado)
+            {
+                MessageBox.Show(
+                    "Não foi detectado nenhuma configuração de projeto, é necessário a configurção para o funcionamento do programa", "Pivodeck");
+
+                var window = new Config();
+                window.ShowDialog();
+
+                _pivotalNotifier = new PivotalNotifier(Properties.Settings.Default.Token,
+                                                       Properties.Settings.Default.ProjectId)
+                {
+                    NewTask = Properties.Settings.Default.TaskCriada,
+                    DeletedTask = Properties.Settings.Default.TaskDeletada,
+                    DeliveredTask = Properties.Settings.Default.TaskEntregue,
+                    FinishedTask = Properties.Settings.Default.TaskFinalizada,
+                    StartedTask = Properties.Settings.Default.TaskIniciada
+                };
+
+                _pivotalNotifier.OnCreatedTask += _pivotalNotifier_OnCreatedTask;
+                _pivotalNotifier.OnStartedTask += _pivotalNotifier_OnStartedTask;
+                _pivotalNotifier.OnDeletedTask += _pivotalNotifier_OnDeletedTask;
+                _pivotalNotifier.OnDeliveredTask += _pivotalNotifier_OnDeliveredTask;
+                _pivotalNotifier.OnFinishedTask += _pivotalNotifier_OnFinishedTask;
+            }
         }
 
         private void SetNotifyIcon(string iconPrefix)
@@ -136,11 +150,29 @@ namespace Pivodeck
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
-            var window = new Config(_pivotalNotifier);
+            var window = new Config();
             window.ShowDialog();
 
             _pivotalNotifier.OnCreatedTask += _pivotalNotifier_OnCreatedTask;
             _pivotalNotifier.OnStartedTask += _pivotalNotifier_OnStartedTask;
+            _pivotalNotifier.OnDeletedTask += _pivotalNotifier_OnDeletedTask;
+            _pivotalNotifier.OnDeliveredTask += _pivotalNotifier_OnDeliveredTask;
+            _pivotalNotifier.OnFinishedTask += _pivotalNotifier_OnFinishedTask;
+        }
+
+        void _pivotalNotifier_OnFinishedTask(Story story)
+        {
+            throw new NotImplementedException();
+        }
+
+        void _pivotalNotifier_OnDeliveredTask(Story story)
+        {
+            throw new NotImplementedException();
+        }
+
+        void _pivotalNotifier_OnDeletedTask(Story story)
+        {
+            throw new NotImplementedException();
         }
 
         private void _pivotalNotifier_OnStartedTask(Story story)
@@ -149,6 +181,16 @@ namespace Pivodeck
             {
                 extendedNotifyIcon_OnShowWindow();
                 lblContent.Text = "Task iniciada: " + story.Name;
+            };
+            Dispatcher.Invoke(acao);
+        }
+
+        private void _pivotalNotifier_OnCreatedTask(Story story)
+        {
+            Action acao = () =>
+            {
+                extendedNotifyIcon_OnShowWindow();
+                lblContent.Text = story.Name;
             };
             Dispatcher.Invoke(acao);
         }

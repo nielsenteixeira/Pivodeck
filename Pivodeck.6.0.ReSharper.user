@@ -1,0 +1,225 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:CreateTask.xaml.cs" caret="495" fromTop="0" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="890" fromTop="18" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="5756" fromTop="10" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:CreateTask.xaml" caret="3111" fromTop="9" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="1" fromTop="0" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="2941" fromTop="12" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="533" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:CreateTask.xaml.cs" caret="815" fromTop="22" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="201" fromTop="3" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="1820" fromTop="7" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="3046" fromTop="8" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml" caret="2379" fromTop="8" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml" caret="3567" fromTop="6" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1850" fromTop="17" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1495" fromTop="6" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="633" fromTop="16" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="520" fromTop="12" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="211" fromTop="6" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="392" fromTop="12" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:Config.xaml.cs" caret="832" fromTop="18" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1643" fromTop="13" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4351" fromTop="37" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4323" fromTop="36" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="1778" fromTop="31" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4323" fromTop="21" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="1137" fromTop="23" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4031" fromTop="25" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4031" fromTop="23" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4129" fromTop="35" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="5077" fromTop="23" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="5186" fromTop="13" />
+      <File id="E78881F6-3E47-4BBD-A6F8-DC51C0C24936/f:MainWindow.xaml.cs" caret="5339" fromTop="16" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="252" fromTop="9" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="1417" fromTop="6" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="4485" fromTop="36" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="2685" fromTop="11" />
+      <File id="8B8998DC-931A-453D-8467-9BA5FF5487AB/f:PivotalNotifier.cs" caret="752" fromTop="20" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="cbCriada" priority="31" />
+      <Item value="if" priority="191" />
+      <Item value="cbDeletada" priority="30" />
+      <Item value="_pivotalNotifier" priority="95" />
+      <Item value="cbEntregue" priority="31" />
+      <Item value="cbFinalizada" priority="31" />
+      <Item value="cbIniciada" priority="26" />
+      <Item value="bool" priority="31" />
+      <Item value="false" priority="31" />
+      <Item value="returnValue" priority="31" />
+      <Item value="string" priority="63" />
+      <Item value="txtNome" priority="95" />
+      <Item value="txtLabels" priority="31" />
+      <Item value="txtDescricao" priority="58" />
+      <Item value="cmbTipo" priority="63" />
+      <Item value="name" priority="31" />
+      <Item value="type" priority="31" />
+      <Item value="StoryTypeEnum`0" priority="31" />
+      <Item value="labels" priority="31" />
+      <Item value="points" priority="31" />
+      <Item value="sldPontos" priority="31" />
+      <Item value="_pivotal" priority="63" />
+      <Item value="foreach" priority="127" />
+      <Item value="project" priority="31" />
+      <Item value="x" priority="159" />
+      <Item value="projectFacade" priority="31" />
+      <Item value="int" priority="127" />
+      <Item value="txtProjeto" priority="95" />
+      <Item value="DynamicResourceExtension`0" priority="31" />
+      <Item value="new" priority="159" />
+      <Item value="d" priority="31" />
+      <Item value="Thread" priority="28" />
+      <Item value="public" priority="95" />
+      <Item value="void" priority="63" />
+      <Item value="searcher" priority="31" />
+      <Item value="ThreadStart" priority="28" />
+      <Item value="while" priority="31" />
+      <Item value="Thread`0" priority="31" />
+      <Item value="private" priority="63" />
+      <Item value="DateTime`0" priority="31" />
+      <Item value="_lastDateSearched" priority="31" />
+      <Item value="stories" priority="191" />
+      <Item value="delegate" priority="31" />
+      <Item value="story" priority="128" />
+      <Item value="event" priority="31" />
+      <Item value="CreatedTask`0" priority="32" />
+      <Item value="OnCreatedTask" priority="31" />
+      <Item value="PivotalNotifier" priority="28" />
+      <Item value="null" priority="95" />
+      <Item value="Action`0" priority="31" />
+      <Item value="this" priority="31" />
+      <Item value="MouseDownEvent" priority="31" />
+      <Item value="continue" priority="31" />
+      <Item value="finally" priority="31" />
+      <Item value="cachedStorey" priority="54" />
+      <Item value="switch" priority="31" />
+      <Item value="OnFinishedTask" priority="31" />
+      <Item value="OnDeliveredTask" priority="31" />
+      <Item value="throw" priority="31" />
+      <Item value="NotImplementedException" priority="29" />
+      <Item value="_cachedStories" priority="31" />
+      <Item value="Story`0" priority="31" />
+      <Item value="OnDeletedTask" priority="32" />
+      <Item value="IDictionary" priority="31" />
+      <Item value="List&lt;Story&gt;" priority="28" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.CheckBox">
+      <Item value="IsChecked" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="53" />
+      <Item value="HasValue" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrWhiteSpace`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
+      <Item value="Text" priority="161" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ComboBox">
+      <Item value="SelectedIndex" priority="26" />
+      <Item value="SelectedValue" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Pivodeck.Core.PivotalNotifier">
+      <Item value="CreateTask`0" priority="26" />
+      <Item value="OnCreatedTask" priority="26" />
+      <Item value="OnStartedTask" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Slider">
+      <Item value="Value" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PivotalTracker.FluentAPI.Service.PivotalTrackerFacade">
+      <Item value="Projects`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PivotalTracker.FluentAPI.Service.ProjectsFacade">
+      <Item value="FindProject`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PivotalTracker.FluentAPI.Domain.Project">
+      <Item value="Id" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PivotalTracker.FluentAPI.Service.StoryFacade`1">
+      <Item value="Move`0" priority="26" />
+      <Item value="Update`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="SetData`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PivotalTracker.FluentAPI.Service.StoriesProjectFacade">
+      <Item value="Filter`0" priority="26" />
+      <Item value="All`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PivotalTracker.FluentAPI.Service.StoriesFacade">
+      <Item value="Item" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PivotalTracker.FluentAPI.Domain.Story">
+      <Item value="CreatedDate" priority="26" />
+      <Item value="Name" priority="26" />
+      <Item value="Id" priority="54" />
+      <Item value="CurrentState" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Where`1" priority="26" />
+      <Item value="ToList`1" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="ForEach`0" priority="53" />
+      <Item value="Any`1" priority="27" />
+      <Item value="First`1" priority="26" />
+      <Item value="All`1" priority="22" />
+      <Item value="Contains`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Pivodeck.Core.PivotalNotifier+CreatedTask">
+      <Item value="Invoke`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
+      <Item value="Text" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Grid">
+      <Item value="Dispatcher" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Threading.Dispatcher">
+      <Item value="Invoke`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="Equals`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Pivodeck.Core.PivotalNotifier+TaskStatusChanged">
+      <Item value="Invoke`0" priority="27" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

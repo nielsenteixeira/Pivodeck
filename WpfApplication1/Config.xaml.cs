@@ -5,7 +5,7 @@ namespace Pivodeck
 {
     public partial class Config
     {
-        public Config(PivotalNotifier pivotalNotifier)
+        public Config()
         {
             InitializeComponent();
         }
@@ -13,13 +13,16 @@ namespace Pivodeck
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtToken.Text))
-                MainWindow._pivotalNotifier = new PivotalNotifier(txtToken.Text, int.Parse(txtProjeto.Text));
-
-            MainWindow._pivotalNotifier.NewTask = cbCriada.IsChecked.Value;
-            MainWindow._pivotalNotifier.DeletedTask = cbDeletada.IsChecked.Value;
-            MainWindow._pivotalNotifier.DeliveredTask = cbEntregue.IsChecked.Value;
-            MainWindow._pivotalNotifier.FinishedTask = cbFinalizada.IsChecked.Value;
-            MainWindow._pivotalNotifier.StartedTask = cbIniciada.IsChecked.Value;
+            {
+                Properties.Settings.Default.Token = txtToken.Text;
+                Properties.Settings.Default.ProjectId = int.Parse(txtProjeto.Text);
+                Properties.Settings.Default.TaskCriada= cbCriada.IsChecked.Value;
+                Properties.Settings.Default.TaskDeletada= cbDeletada.IsChecked.Value;
+                Properties.Settings.Default.TaskEntregue = cbEntregue.IsChecked.Value;
+                Properties.Settings.Default.TaskFinalizada = cbFinalizada.IsChecked.Value;
+                Properties.Settings.Default.TaskIniciada= cbIniciada.IsChecked.Value;
+                Properties.Settings.Default.Save();
+            }
 
             Close();
         }
