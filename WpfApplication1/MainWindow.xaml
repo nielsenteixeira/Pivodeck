@@ -1,21 +1,21 @@
 ﻿<Window x:Class="Pivodeck.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded"
+        Title="MainWindow" Height="350" Width="525" Loaded="WindowLoaded"
         ShowInTaskbar="False"
         WindowStyle="None" 
         AllowsTransparency="True" 
         ResizeMode="NoResize"
         Background="Transparent"
-        MouseEnter="uiWindowMainNotification_MouseEnter"
-        MouseLeave="uiWindowMainNotification_MouseLeave" 
+        MouseEnter="UiWindowMainNotificationMouseEnter"
+        MouseLeave="UiWindowMainNotificationMouseLeave" 
         Visibility="Visible" 
         Topmost="True" 
         BorderThickness="1" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pivodeck"
-        xmlns:UI="clr-namespace:Pivodeck" mc:Ignorable="d" Closing="Window_Closing">
+        xmlns:UI="clr-namespace:Pivodeck" mc:Ignorable="d" Closing="WindowClosing">
     <Window.Resources>
         <Storyboard x:Key="gridFadeInStoryBoard">
             <DoubleAnimation Storyboard.TargetName="uiGridMain" BeginTime="0:0:0.1"
@@ -43,7 +43,7 @@
                 <!--<local:SlickToggleButton CornerRadius="0,0,0,4" x:Name="PinButton" Style="{StaticResource SlickButton}" HighlightBackground="Blue" PressedBackground="DarkBlue" Grid.Column="1" Grid.Row="1" FontWeight="Bold" Click="PinButton_Click">
                         <Image x:Name="PinImage" Source="pack://application:,,/Images/Un-Pinned.png" Stretch="None"/>
                 </local:SlickToggleButton>-->
-                <UI:SlickToggleButton CornerRadius="0,0,4,0" x:Name="CloseButton" Style="{StaticResource SlickButton}" HighlightBackground="Red" Content="X" Click="CloseButton_Click" Grid.Row="1" FontWeight="Bold" Foreground="#FFFFFFFF" Grid.Column="2" />
+                <UI:SlickToggleButton CornerRadius="0,0,4,0" x:Name="CloseButton" Style="{StaticResource SlickButton}" HighlightBackground="Red" Content="X" Click="CloseButtonClick" Grid.Row="1" FontWeight="Bold" Foreground="#FFFFFFFF" Grid.Column="2" />
             </Grid>
             <Grid>
                 <Grid.RowDefinitions>
@@ -55,12 +55,12 @@
                 <local:HorizontalSeparator d:LayoutOverrides="HorizontalAlignment" Grid.Row="5"/>
                 <Label Margin="5,3.395,79,15" x:Name="TitleLabel" Foreground="White" Opacity="0.9" Content="Pivodeck"/>
                 <StackPanel Grid.Row="1" Margin="10,10,10,10">
-                    <Label FontWeight="Bold">Content here</Label>
+                    <TextBlock Name="lblContent" FontWeight="Bold">Content here</TextBlock>
                 </StackPanel>
                 <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" Margin="5,5,5,5" Grid.Row="2">
                     <Button HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto">Abrir Projeto</Button>
-                    <Button Name="btnCreateTask" HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto" Click="btnCreateTask_Click">Criar Task</Button>
-                    <Button HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto" Click="Button_Click">Configuração</Button>
+                    <Button Name="btnCreateTask" HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto" Click="BtnCreateTaskClick">Criar Task</Button>
+                    <Button HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto" Click="ButtonClick">Configuração</Button>
                 </StackPanel>
             </Grid>
         </Grid>

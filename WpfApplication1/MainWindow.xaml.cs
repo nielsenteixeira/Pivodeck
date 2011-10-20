@@ -5,25 +5,26 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
-using PivotalTracker.FluentAPI.Domain;
 using Pivodeck.Core;
+using PivotalTracker.FluentAPI.Domain;
 
 namespace Pivodeck
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        private readonly ExtendedNotifyIcon extendedNotifyIcon;
+        private readonly ExtendedNotifyIcon _extendedNotifyIcon;
 
-        private readonly Storyboard gridFadeInStoryBoard;
-        private readonly Storyboard gridFadeOutStoryBoard;
-        private readonly PivotalNotifier pivotalNotifier;
+        private readonly Storyboard _gridFadeInStoryBoard;
+        private readonly Storyboard _gridFadeOutStoryBoard;
+        public static PivotalNotifier _pivotalNotifier;
 
         public MainWindow()
         {
-            extendedNotifyIcon = new ExtendedNotifyIcon();
-            extendedNotifyIcon.MouseLeave += extendedNotifyIcon_OnHideWindow;
-            extendedNotifyIcon.MouseMove += extendedNotifyIcon_OnShowWindow;
-            extendedNotifyIcon.targetNotifyIcon.Text = "Popup Text";
+            _pivotalNotifier = null;
+            _extendedNotifyIcon = new ExtendedNotifyIcon();
+            _extendedNotifyIcon.MouseLeave += extendedNotifyIcon_OnHideWindow;
+            _extendedNotifyIcon.MouseMove += extendedNotifyIcon_OnShowWindow;
+            _extendedNotifyIcon.targetNotifyIcon.Text = Properties.Resources.MainWindow_MainWindow_Popup_Text;
             SetNotifyIcon("Red");
 
             InitializeComponent();
@@ -32,22 +33,30 @@ namespace Pivodeck
             Opacity = 0;
             uiGridMain.Opacity = 0;
 
-            gridFadeOutStoryBoard = (Storyboard)TryFindResource("gridFadeOutStoryBoard");
-            gridFadeOutStoryBoard.Completed += gridFadeOutStoryBoard_Completed;
-            gridFadeInStoryBoard = (Storyboard)TryFindResource("gridFadeInStoryBoard");
-            gridFadeInStoryBoard.Completed += gridFadeInStoryBoard_Completed;
-
-            pivotalNotifier = new PivotalNotifier();
+            _gridFadeOutStoryBoard = (Storyboard)TryFindResource("gridFadeOutStoryBoard");
+            _gridFadeOutStoryBoard.Completed += GridFadeOutStoryBoardCompleted;
+            _gridFadeInStoryBoard = (Storyboard)TryFindResource("gridFadeInStoryBoard");
+            _gridFadeInStoryBoard.Completed += GridFadeInStoryBoardCompleted;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        void _pivotalNotifier_OnCreatedTask(Story story)
+        {
+            Action acao = () =>
+                              {
+                                  extendedNotifyIcon_OnShowWindow();
+                                  lblContent.Text = story.Name;
+                              };
+            Dispatcher.Invoke(acao);
+        }
+
+        private void WindowLoaded(object sender, RoutedEventArgs e)
         {
         }
 
         private void SetNotifyIcon(string iconPrefix)
         {
             Stream iconStream = Application.GetResourceStream(new Uri("pack://application:,,/Images/" + iconPrefix + "Orb.ico")).Stream;
-            extendedNotifyIcon.targetNotifyIcon.Icon = new Icon(iconStream);
+            _extendedNotifyIcon.targetNotifyIcon.Icon = new Icon(iconStream);
         }
 
         private void SetWindowToBottomRightOfScreen()
@@ -58,7 +67,7 @@ namespace Pivodeck
 
         private void extendedNotifyIcon_OnShowWindow()
         {
-            gridFadeOutStoryBoard.Stop();
+            _gridFadeOutStoryBoard.Stop();
             Opacity = 1; // Show the window (backing)
             Topmost = true;
             if (uiGridMain.Opacity > 0 && uiGridMain.Opacity < 1)
@@ -67,16 +76,16 @@ namespace Pivodeck
             }
             else if (uiGridMain.Opacity == 0)
             {
-                gridFadeInStoryBoard.Begin();
+                _gridFadeInStoryBoard.Begin();
             }
         }
 
         private void extendedNotifyIcon_OnHideWindow()
         {
-            gridFadeInStoryBoard.Stop(); // Stop the fade in storyboard if running.
+            _gridFadeInStoryBoard.Stop(); // Stop the fade in storyboard if running.
 
             if (uiGridMain.Opacity == 1 && Opacity == 1)
-                gridFadeOutStoryBoard.Begin();
+                _gridFadeOutStoryBoard.Begin();
             else // Just hide the window and grid
             {
                 uiGridMain.Opacity = 0;
@@ -84,24 +93,24 @@ namespace Pivodeck
             }
         }
 
-        private void uiWindowMainNotification_MouseEnter(object sender, MouseEventArgs e)
+        private void UiWindowMainNotificationMouseEnter(object sender, MouseEventArgs e)
         {
-            extendedNotifyIcon.StopMouseLeaveEventFromFiring();
-            gridFadeOutStoryBoard.Stop();
+            _extendedNotifyIcon.StopMouseLeaveEventFromFiring();
+            _gridFadeOutStoryBoard.Stop();
             uiGridMain.Opacity = 1;
         }
 
-        private void uiWindowMainNotification_MouseLeave(object sender, MouseEventArgs e)
+        private void UiWindowMainNotificationMouseLeave(object sender, MouseEventArgs e)
         {
             extendedNotifyIcon_OnHideWindow();
         }
 
-        private void gridFadeOutStoryBoard_Completed(object sender, EventArgs e)
+        private void GridFadeOutStoryBoardCompleted(object sender, EventArgs e)
         {
             Opacity = 0;
         }
 
-        private void gridFadeInStoryBoard_Completed(object sender, EventArgs e)
+        private void GridFadeInStoryBoardCompleted(object sender, EventArgs e)
         {
             Opacity = 1;
         }
@@ -119,27 +128,40 @@ namespace Pivodeck
             SetNotifyIcon(((RadioButton)sender).Tag.ToString());
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private void CloseButtonClick(object sender, RoutedEventArgs e)
         {
-            extendedNotifyIcon.Dispose();
+            _extendedNotifyIcon.Dispose();
             Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonClick(object sender, RoutedEventArgs e)
         {
-            var window = new Config(pivotalNotifier);
+            var window = new Config(_pivotalNotifier);
+            window.ShowDialog();
+
+            _pivotalNotifier.OnCreatedTask += _pivotalNotifier_OnCreatedTask;
+            _pivotalNotifier.OnStartedTask += _pivotalNotifier_OnStartedTask;
+        }
+
+        private void _pivotalNotifier_OnStartedTask(Story story)
+        {
+            Action acao = () =>
+            {
+                extendedNotifyIcon_OnShowWindow();
+                lblContent.Text = "Task iniciada: " + story.Name;
+            };
+            Dispatcher.Invoke(acao);
+        }
+
+        private void BtnCreateTaskClick(object sender, RoutedEventArgs e)
+        {
+            var window = new CreateTask(_pivotalNotifier);
             window.ShowDialog();
         }
 
-        private void btnCreateTask_Click(object sender, RoutedEventArgs e)
+        private void WindowClosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            var window = new CreateTask();
-            window.ShowDialog();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            extendedNotifyIcon.Dispose();
+            _extendedNotifyIcon.Dispose();
         }
     }
 }

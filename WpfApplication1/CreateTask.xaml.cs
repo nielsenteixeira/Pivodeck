@@ -1,32 +1,49 @@
-﻿using System.Windows;
-using System.Linq;
-using PivotalTracker.FluentAPI.Domain;
+﻿using System.Linq;
+using System.Windows;
 using Pivodeck.Core;
-using System.Collections.Generic;
+using PivotalTracker.FluentAPI.Domain;
 
 namespace Pivodeck
 {
-    /// <summary>
-    /// Interaction logic for CreateTask.xaml
-    /// </summary>
-    public partial class CreateTask : Window
+    public partial class CreateTask
     {
-        public CreateTask()
+        private readonly PivotalNotifier _pivotalNotifier;
+
+        public CreateTask(PivotalNotifier pivotalNotifier)
         {
+            _pivotalNotifier = pivotalNotifier;
             InitializeComponent();
         }
 
-        private void btnOk_Click(object sender, RoutedEventArgs e)
+        private void BtnOkClick(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            if (Valido())
+            {
+                dynamic d = cmbTipo.SelectedValue;
+                var storyTypeEnum = (StoryTypeEnum) d.Value;
+                _pivotalNotifier.CreateTask(txtNome.Text, storyTypeEnum, txtLabels.Text,
+                                            (int) sldPontos.Value, txtDescricao.Text);
+            }
+            Close();
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private bool Valido()
         {
-            this.Close();
+            var returnValue = !string.IsNullOrWhiteSpace(txtNome.Text) &&
+                              !string.IsNullOrWhiteSpace(txtProjeto.Text) &&
+                              !string.IsNullOrWhiteSpace(txtLabels.Text) &&
+                              !string.IsNullOrWhiteSpace(txtDescricao.Text) &&
+                              cmbTipo.SelectedIndex != -1;
+
+            return returnValue;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void CloseButtonClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void WindowLoaded(object sender, RoutedEventArgs e)
         {
             var v = new EnumUtil<StoryTypeEnum>();
             cmbTipo.ItemsSource = v.ReturnAsDictionary<int>().Select(x => new

@@ -59,5 +59,14 @@ namespace Pivodeck.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Popup Text.
+        /// </summary>
+        internal static string MainWindow_MainWindow_Popup_Text {
+            get {
+                return ResourceManager.GetString("MainWindow_MainWindow_Popup_Text", resourceCulture);
+            }
+        }
     }
 }
