@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 using Pivodeck.Core;
+using Pivodeck.Core.Extensions;
 using PivotalTracker.FluentAPI.Domain;
 
 namespace Pivodeck
@@ -42,28 +46,11 @@ namespace Pivodeck
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
             if (Properties.Settings.Default.Configurado)
+                InitializePivotalNotifier();
+            else
             {
-                MessageBox.Show(
-                    "Não foi detectado nenhuma configuração de projeto, é necessário a configurção para o funcionamento do programa", "Pivodeck");
-
-                var window = new Config();
-                window.ShowDialog();
-
-                _pivotalNotifier = new PivotalNotifier(Properties.Settings.Default.Token,
-                                                       Properties.Settings.Default.ProjectId)
-                {
-                    NewTask = Properties.Settings.Default.TaskCriada,
-                    DeletedTask = Properties.Settings.Default.TaskDeletada,
-                    DeliveredTask = Properties.Settings.Default.TaskEntregue,
-                    FinishedTask = Properties.Settings.Default.TaskFinalizada,
-                    StartedTask = Properties.Settings.Default.TaskIniciada
-                };
-
-                _pivotalNotifier.OnCreatedTask += _pivotalNotifier_OnCreatedTask;
-                _pivotalNotifier.OnStartedTask += _pivotalNotifier_OnStartedTask;
-                _pivotalNotifier.OnDeletedTask += _pivotalNotifier_OnDeletedTask;
-                _pivotalNotifier.OnDeliveredTask += _pivotalNotifier_OnDeliveredTask;
-                _pivotalNotifier.OnFinishedTask += _pivotalNotifier_OnFinishedTask;
+                MessageBox.Show("Não foi detectado nenhuma configuração de projeto, é necessário a configurção para o funcionamento do programa", "Pivodeck", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                ButtonClick(sender, e);
             }
         }
 
@@ -145,6 +132,7 @@ namespace Pivodeck
         private void CloseButtonClick(object sender, RoutedEventArgs e)
         {
             _extendedNotifyIcon.Dispose();
+            _pivotalNotifier.Dispose();
             Close();
         }
 
@@ -152,6 +140,20 @@ namespace Pivodeck
         {
             var window = new Config();
             window.ShowDialog();
+
+            InitializePivotalNotifier();
+        }
+
+        private void InitializePivotalNotifier()
+        {
+            _pivotalNotifier = new PivotalNotifier(Properties.Settings.Default.Token, Properties.Settings.Default.ProjectId)
+                                   {
+                                       NewTask = Properties.Settings.Default.TaskCriada,
+                                       DeletedTask = Properties.Settings.Default.TaskDeletada,
+                                       DeliveredTask = Properties.Settings.Default.TaskEntregue,
+                                       FinishedTask = Properties.Settings.Default.TaskFinalizada,
+                                       StartedTask = Properties.Settings.Default.TaskIniciada
+                                   };
 
             _pivotalNotifier.OnCreatedTask += _pivotalNotifier_OnCreatedTask;
             _pivotalNotifier.OnStartedTask += _pivotalNotifier_OnStartedTask;
@@ -162,35 +164,64 @@ namespace Pivodeck
 
         void _pivotalNotifier_OnFinishedTask(Story story)
         {
-            throw new NotImplementedException();
+            ShowStory(story, "Tarefa finalizada");
         }
 
         void _pivotalNotifier_OnDeliveredTask(Story story)
         {
-            throw new NotImplementedException();
+            ShowStory(story, "Tarefa entregue");
         }
 
         void _pivotalNotifier_OnDeletedTask(Story story)
         {
-            throw new NotImplementedException();
+            ShowStory(story, "Tarefa deletada");
         }
 
         private void _pivotalNotifier_OnStartedTask(Story story)
         {
-            Action acao = () =>
-            {
-                extendedNotifyIcon_OnShowWindow();
-                lblContent.Text = "Task iniciada: " + story.Name;
-            };
-            Dispatcher.Invoke(acao);
+            ShowStory(story, "Tarefa iniciada");
         }
 
         private void _pivotalNotifier_OnCreatedTask(Story story)
         {
+            ShowStory(story, "Tarefa criada");
+        }
+
+        private void ShowStory(Story story, string oQueAconteceu)
+        {
             Action acao = () =>
             {
+                lblAcao.Text = string.Format("{0} - Exibido em {1}", oQueAconteceu, DateTime.Now.ToString("dd/MM/yyyy - HH:mm:ss"));
                 extendedNotifyIcon_OnShowWindow();
-                lblContent.Text = story.Name;
+                lblNome.Text = story.Name;
+                lblPontos.Text = story.Estimate.ToString();
+                lblTipo.Source = new BitmapImage(new Uri(string.Format("/Images/{0}.png", (int)story.Type),UriKind.Relative));
+                lblDescricao.Text = story.Description;
+
+                if (story.Labels.Any())
+                    foreach (var label in story.Labels)
+                        lblLabels.Text += string.Format("{0},", label);
+                else
+                    lblLabels.Text = string.Empty;
+
+                if (story.Notes.Any())
+                    foreach (var note in story.Notes)
+                        lblComentarios.Text += note.ToMyString();
+                else
+                    lblComentarios.Text = string.Empty;
+
+                if (story.Tasks.Any())
+                    foreach (var task in story.Tasks)
+                        lblTask.Text += task.Description + "\n";
+                else
+                    lblTask.Text = string.Empty;
+                var timer = new Timer(5000);
+                timer.Start();
+                timer.Elapsed += (x, y) => Dispatcher.Invoke(new Action(() =>
+                                                                            {
+                                                                                extendedNotifyIcon_OnHideWindow();
+                                                                                timer.Stop();
+                                                                            }));
             };
             Dispatcher.Invoke(acao);
         }
@@ -204,6 +235,7 @@ namespace Pivodeck
         private void WindowClosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             _extendedNotifyIcon.Dispose();
+            _pivotalNotifier.Dispose();
         }
     }
 }

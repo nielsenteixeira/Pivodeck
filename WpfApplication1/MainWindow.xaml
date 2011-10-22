@@ -54,47 +54,46 @@
                 <local:HorizontalSeparator d:LayoutOverrides="HorizontalAlignment" Grid.Row="1"/>
                 <local:HorizontalSeparator d:LayoutOverrides="HorizontalAlignment" Grid.Row="5"/>
                 <Label Margin="5,3.395,79,15" x:Name="TitleLabel" Foreground="White" Opacity="0.9" Content="Pivodeck"/>
-                <Grid Grid.Row="1" Margin="10,10,10,10">
+                <Grid Grid.Row="1" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="23"/>
-                        <RowDefinition Height="23"/>
-                        <RowDefinition Height="23"/>
-                        <RowDefinition Height="23"/>
-                        <RowDefinition Height="23"/>
-                        <RowDefinition Height="23"/>
-                        <RowDefinition Height="23"/>
+                        <RowDefinition Height="54*" />
                     </Grid.RowDefinitions>
-                    <TextBlock FontWeight="Bold">O que aconteceu...</TextBlock>
+                    <TextBlock FontWeight="Bold" Grid.ColumnSpan="3" Name="lblAcao">O que aconteceu...</TextBlock>
                     <StackPanel Grid.Row="1" Orientation="Horizontal">
-                        <TextBlock FontWeight="Bold" >Nome:</TextBlock>
-                        <TextBlock Margin="5,0">Nome:</TextBlock>
+                        <Image Name="lblTipo" Width="16"></Image>
                     </StackPanel>
-                    <StackPanel Grid.Row="2" Orientation="Horizontal">
-                        <TextBlock FontWeight="Bold" >Tipo:</TextBlock>
-                        <TextBlock Margin="5,0">Tipo:</TextBlock>
-                    </StackPanel>
-                    <StackPanel Grid.Row="3" Orientation="Horizontal">
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Grid.ColumnSpan="3">
                         <TextBlock FontWeight="Bold" >Labels:</TextBlock>
-                        <TextBlock Margin="5,0">Labels:</TextBlock>
+                        <TextBlock Margin="5,0" Name="lblLabels">Labels:</TextBlock>
                     </StackPanel>
-                    <StackPanel Grid.Row="4" Orientation="Horizontal">
+                    <StackPanel Grid.Row="3" Orientation="Horizontal" Grid.ColumnSpan="3">
                         <TextBlock FontWeight="Bold" >Descrição:</TextBlock>
-                        <TextBlock Margin="5,0">Descrição:</TextBlock>
+                        <TextBlock Margin="5,0" Name="lblDescricao">Descrição:</TextBlock>
                     </StackPanel>
-                    <StackPanel Grid.Row="5" Orientation="Horizontal">
+                    <StackPanel Grid.Row="4" Orientation="Horizontal" Grid.ColumnSpan="3">
                         <TextBlock FontWeight="Bold" >Tasks:</TextBlock>
-                        <TextBlock Margin="5,0">Tasks:</TextBlock>
+                        <TextBlock Margin="5,0" Name="lblTask">Tasks:</TextBlock>
                     </StackPanel>
-                    <StackPanel Grid.Row="6" Orientation="Horizontal">
+                    <StackPanel Grid.Row="5" Orientation="Horizontal" Grid.ColumnSpan="3">
                         <TextBlock FontWeight="Bold" >Comentarios:</TextBlock>
-                        <TextBlock Margin="5,0">Comentarios:</TextBlock>
+                        <TextBlock Margin="5,0" Name="lblComentarios">Comentarios:</TextBlock>
                     </StackPanel>
-                    <StackPanel Grid.Row="7" Orientation="Horizontal">
-                        <TextBlock FontWeight="Bold" >Pontos:</TextBlock>
-                        <TextBlock Margin="5,0">Pontos:</TextBlock>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="1">
+                        <TextBlock Margin="2,0" Name="lblPontos">1</TextBlock>
                     </StackPanel>
-
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="2">
+                        <TextBlock Margin="5,0" Name="lblNome">Nome aqui</TextBlock>
+                    </StackPanel>
                 </Grid>
                 <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" Margin="5,5,5,5" Grid.Row="2">
                     <Button HorizontalAlignment="Center" Style="{StaticResource StealthButton}" Width="auto">Abrir Projeto</Button>

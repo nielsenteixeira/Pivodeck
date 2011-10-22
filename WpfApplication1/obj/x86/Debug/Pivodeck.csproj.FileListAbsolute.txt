@@ -26,3 +26,4 @@ C:\Projetos\Pivodeck\WpfApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Projetos\Pivodeck\WpfApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Projetos\Pivodeck\WpfApplication1\obj\x86\Debug\Pivodeck.exe
 C:\Projetos\Pivodeck\WpfApplication1\obj\x86\Debug\Pivodeck.pdb
+C:\Projetos\Pivodeck\WpfApplication1\bin\Debug\Pivodeck.exe.config

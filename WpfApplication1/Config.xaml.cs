@@ -21,7 +21,9 @@ namespace Pivodeck
                 Properties.Settings.Default.TaskEntregue = cbEntregue.IsChecked.Value;
                 Properties.Settings.Default.TaskFinalizada = cbFinalizada.IsChecked.Value;
                 Properties.Settings.Default.TaskIniciada= cbIniciada.IsChecked.Value;
+                Properties.Settings.Default.Configurado = true;
                 Properties.Settings.Default.Save();
+                Properties.Settings.Default.Upgrade();
             }
 
             Close();

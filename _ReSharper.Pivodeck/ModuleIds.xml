@@ -1,4 +1,5 @@
 <Modules>
   <Module PersistentId="8B8998DC-931A-453D-8467-9BA5FF5487AB" ModuleId="Pivodeck.Core" />
   <Module PersistentId="E78881F6-3E47-4BBD-A6F8-DC51C0C24936" ModuleId="Pivodeck" />
+  <Module PersistentId="PivotalTracker.FluentAPI, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="PivotalTracker.FluentAPI" />
 </Modules>

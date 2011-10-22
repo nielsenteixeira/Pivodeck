@@ -9,19 +9,20 @@ namespace Pivodeck.Core
 {
     public class PivotalNotifier : IDisposable
     {
-        
+
         public bool NewTask { get; set; }
         public bool DeletedTask { get; set; }
         public bool DeliveredTask { get; set; }
         public bool FinishedTask { get; set; }
         public bool StartedTask { get; set; }
 
-        private readonly int _projectId; 
+        private readonly int _projectId;
         private PivotalTrackerFacade _pivotal;
-        private int _sleepSeeconds = 1000;
+        private const int SleepSeeconds = 1000;
         private DateTime _lastTimeFoundNewTask;
         private List<Story> _cachedStories = new List<Story>();
         private readonly Thread _searcher;
+        private bool _strillRunning;
 
         public delegate void TaskStatusChanged(Story story);
 
@@ -31,9 +32,14 @@ namespace Pivodeck.Core
         public event TaskStatusChanged OnDeliveredTask;
         public event TaskStatusChanged OnDeletedTask;
 
-        public PivotalNotifier() { }
+        public PivotalNotifier()
+        {
+            _strillRunning = true;
+            _lastTimeFoundNewTask = DateTime.Now;
+        }
 
         public PivotalNotifier(string tokenValue, int projectId)
+            : this()
         {
             _projectId = projectId;
             var token = new Token(tokenValue);
@@ -60,7 +66,7 @@ namespace Pivodeck.Core
 
         public void Observer()
         {
-            while (true)
+            while (_strillRunning)
             {
                 try
                 {
@@ -74,8 +80,8 @@ namespace Pivodeck.Core
 
                     foreach (Story cachedStorey in _cachedStories)
                     {
-                        Story story = stories.First(x => x.Id.Equals(cachedStorey.Id));
-                        if (story.CurrentState != cachedStorey.CurrentState)
+                        Story story = stories.FirstOrDefault(x => x.Id.Equals(cachedStorey.Id));
+                        if (story != null && story.CurrentState != cachedStorey.CurrentState)
                             switch (story.CurrentState)
                             {
                                 case StoryStateEnum.Started:
@@ -95,19 +101,20 @@ namespace Pivodeck.Core
                                     throw new ArgumentOutOfRangeException();
                             }
                     }
-
-                    if (!_cachedStories.All(x => !stories.Contains(x)))
-                        _cachedStories.Where(x => !stories.Contains(x)).ToList().ForEach(OnDeletedTask.Invoke);
+                     
+                    if (!_cachedStories.All(x => !stories.Contains(x, new StoryComparer())))
+                        _cachedStories.Where(x => !stories.Contains(x, new StoryComparer())).ToList().ForEach(OnDeletedTask.Invoke);
 
                     _cachedStories = stories;
                 }
-                catch{ continue; }
-                finally { Thread.Sleep(_sleepSeeconds); }
+                catch { continue; }
+                finally { Thread.Sleep(SleepSeeconds); }
             }
         }
 
         public void Dispose()
         {
+            _strillRunning = false;
             _searcher.Abort();
         }
     }
