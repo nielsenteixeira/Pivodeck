@@ -78,32 +78,24 @@ namespace Pivodeck.Core
                         _lastTimeFoundNewTask = DateTime.Now;
                     }
 
-                    foreach (Story cachedStorey in _cachedStories)
+                    foreach (var story in from cachedStorey in _cachedStories
+                                          let story = stories.FirstOrDefault(x => x.Id.Equals(cachedStorey.Id))
+                                          where story != null && story.CurrentState != cachedStorey.CurrentState
+                                          select story)
                     {
-                        Story story = stories.FirstOrDefault(x => x.Id.Equals(cachedStorey.Id));
-                        if (story != null && story.CurrentState != cachedStorey.CurrentState)
-                            switch (story.CurrentState)
-                            {
-                                case StoryStateEnum.Started:
-                                    OnStartedTask(story);
-                                    break;
-                                case StoryStateEnum.Finished:
-                                    OnFinishedTask(story);
-                                    break;
-                                case StoryStateEnum.Delivered:
-                                    OnDeliveredTask(story);
-                                    break;
-                                case StoryStateEnum.Accepted:
-                                    throw new NotImplementedException("Modifcação de status para aceito não implementado");
-                                case StoryStateEnum.Rejected:
-                                    throw new NotImplementedException("Modifcação de status para rejeitado não implementado");
-                                default:
-                                    throw new ArgumentOutOfRangeException();
-                            }
+                        switch (story.CurrentState)
+                        {
+                            case StoryStateEnum.Started: OnStartedTask(story); break;
+                            case StoryStateEnum.Finished: OnFinishedTask(story); break;
+                            case StoryStateEnum.Delivered: OnDeliveredTask(story); break;
+                            case StoryStateEnum.Accepted: throw new NotImplementedException("Modifcação de status para aceito não implementado");
+                            case StoryStateEnum.Rejected: throw new NotImplementedException("Modifcação de status para rejeitado não implementado");
+                            default: throw new ArgumentOutOfRangeException();
+                        }
                     }
-                     
-                    if (!_cachedStories.All(x => !stories.Contains(x, new StoryComparer())))
-                        _cachedStories.Where(x => !stories.Contains(x, new StoryComparer())).ToList().ForEach(OnDeletedTask.Invoke);
+
+                    if (!_cachedStories.All(x => !stories.Contains(x, StoryComparer.Intance)))
+                        _cachedStories.Where(x => !stories.Contains(x, StoryComparer.Intance)).ToList().ForEach(OnDeletedTask.Invoke);
 
                     _cachedStories = stories;
                 }
